@@ -1,6 +1,5 @@
 //React é obrigatório para construirmos interfaces
-//Fragment é como uma View, serve para agrupar (não tem impacto nenhum visualmente)
-import React, { Fragment } from 'react';
+import React from 'react';
 
 //trazemos do React o que precisamos no contexto mobile
 import { View, Text } from 'react-native';
@@ -8,7 +7,8 @@ import { View, Text } from 'react-native';
 export default function App() {
   return (
 
-    <Fragment>
+    //Nova forma de uso do Fragment (serve para agrupar, não tem impacto nenhum visualmente)
+    <>
       <View style={{
         //tomará toda a tela
         flex: 1,
@@ -24,7 +24,7 @@ export default function App() {
         marginBottom: 20
 
       }}>Ignite</Text>
-    </Fragment>
+    </>
 
   )
 }
