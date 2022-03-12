@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-export default function Home() {
+export function Home() {
     return (
         <View style={{
             flex: 1,
