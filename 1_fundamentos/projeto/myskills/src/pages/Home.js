@@ -1,19 +1,23 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+
+//SafeAreaView serve para tirar o conteúdo da altura do notch do iPhone
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 
 export function Home() {
     return (
-        <View style={styles.container}>
-            <Text>React Native</Text>
-            <Text>Ignite</Text>
-        </View>
+        <SafeAreaView style={styles.container}>
+            <Text style={styles.title}>Welcome, Deivid</Text>
+
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
+        backgroundColor: '#121015'
     },
+    title: {
+        color: '#fff'
+    }
 });
