@@ -1,13 +1,24 @@
 import React from 'react';
 
-import { View, Text, StyleSheet, TextInput } from 'react-native';
+import {
+    View,
+    Text,
+    StyleSheet,
+    TextInput,
+    Platform
+} from 'react-native';
 
 export function Home() {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Welcome, Deivid</Text>
 
-            <TextInput style={styles.input} />
+            <TextInput
+                style={styles.input}
+                placeholder="Nova skill"
+                placeholderTextColor="#555"
+
+            />
 
         </View>
     )
@@ -30,7 +41,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#1F1E25',
         color: '#FFF',
         fontSize: 18,
-        padding: 15,
+        padding: Platform.OS == 'ios' ? 15 : 10,
         marginTop: 30,
         borderRadius: 7
     }
