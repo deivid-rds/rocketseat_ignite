@@ -5,7 +5,10 @@ import {
     Text,
     StyleSheet,
     TextInput,
-    Platform
+    Platform,
+
+    //quando se clica nele, faz efeito de transparência
+    TouchableOpacity
 } from 'react-native';
 
 export function Home() {
@@ -19,6 +22,15 @@ export function Home() {
                 placeholderTextColor="#555"
 
             />
+
+            <TouchableOpacity
+                style={styles.button}
+
+                //controlar a intensidade da opacidade (de 0 a 1)
+                activeOpacity={0.7}
+            >
+                <Text style={styles.buttonText}>Add</Text>
+            </TouchableOpacity>
 
         </View>
     )
@@ -44,5 +56,17 @@ const styles = StyleSheet.create({
         padding: Platform.OS == 'ios' ? 15 : 10,
         marginTop: 30,
         borderRadius: 7
+    },
+    button: {
+        backgroundColor: '#A370F7',
+        padding: 15,
+        borderRadius: 7,
+        alignItems: 'center',
+        marginTop: 20
+    },
+    buttonText: {
+        color: '#FFF',
+        fontSize: 17,
+        fontWeight: 'bold'
     }
 });
